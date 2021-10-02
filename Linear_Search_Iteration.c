@@ -1,25 +1,31 @@
+
 #include<stdio.h>
 
-int main()
+void main()
 {
-	int key,i,status=0;
-	int arr[8]={2,6,7,8,9,1,3,4};
+	int size;
+	printf("Enter the size of Array: \n");
+	scanf("%d",&size);
 	
-	printf("Enter the element to be search: ");
-	scanf("%d",&key);
+	int Array[size],i;
 	
-	for(i=0;i<8;i++)
+	printf("Enter the Array Elememts :\n");
+	for(i=0;i<size;i++)
 	{
-		if(key==arr[i])
+		scanf("%d",&Array[i]);
+	}
+	int key;
+	printf("Enter the element to search:\n");
+	scanf("%d",&key);
+	//Linear Search
+	
+	for(i=0;i<size;i++)
+	{
+		if(Array[i] == key)
 		{
-			printf("%d is found in list...\n",key);
-			printf("%d is at %d ...",key,(i+1));
-			status = 1;
+			printf("The Elements is at : %d",i+1);
 			break;
 		}
-	}
-	if(status==0){
-	 printf("%d is not in list...",key);
 	}
 	
 }
