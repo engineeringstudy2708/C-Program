@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 struct personal{
-    char Name[10];             // int => interger
-    char Dep[10];              // struct personal --> char,char,int
+    char Name[10];             
+    char Dep[10];            
     int salary;                
 };
 
@@ -12,7 +12,7 @@ void main()
 	printf("Enter the size of person:");
 	scanf("%d",&size);
 	
-    struct personal person[size]; // person[0] - persons[9]
+    struct personal person[size];
     int i;
     
     for(i=0;i<size;i++)
